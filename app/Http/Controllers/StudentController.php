@@ -14,7 +14,7 @@ class StudentController extends Controller
         return view('students.index');
     }
 
-    // Fetch students for DataTables
+    
     public function list()
     {
         $students = Student::latest()->get();
@@ -24,8 +24,8 @@ class StudentController extends Controller
         ]);
     }
 
-    // Store new student
-    public function store(StoreStudentRequest $request)
+    // add new student
+    public function add(StoreStudentRequest $request)
     {
         Student::create($request->validated());
 

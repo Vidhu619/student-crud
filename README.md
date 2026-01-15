@@ -1,18 +1,15 @@
-1.CREATE DATABASE student_crud;
-2.php artisan config:clear
-3.php artisan migrate
-Add validation rules
-npm install
-npm run build
-use App\Models\User;
-php artisan tinker
+## Default Roles
 
-User::create([
-  'name' => 'Admin',
-  'email' => 'admin@example.com',
-  'password' => bcrypt('admin123')
-]);
-exit;
- php artisan make:middleware PreventBackHistory
+| Role | Permissions |
+|------|------------|
+| admin | Full CRUD access |
+| user | View only |
 
+New registrations are assigned the `user` role by default.
+
+---
+
+## Notes
+
+- Admin account must be created manually.
 

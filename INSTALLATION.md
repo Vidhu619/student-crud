@@ -1,8 +1,6 @@
 # Installation Guide – Student CRUD Application (Laravel)
 
-This guide explains how to set up and run the Student CRUD Application locally.
 
----
 
 ## System Requirements
 
@@ -57,28 +55,9 @@ cp .env.example .env
 
 ---
 
-### 5. Configure database
 
-Open `.env` and update:
 
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=student_crud
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-Create database:
-
-```sql
-CREATE DATABASE student_crud;
-```
-
----
-
-### 6. Generate application key
+### 5. Generate application key
 
 ```bash
 php artisan key:generate
@@ -86,7 +65,7 @@ php artisan key:generate
 
 ---
 
-### 7. Run migrations
+### 6. Run migrations
 
 ```bash
 php artisan migrate
@@ -94,7 +73,7 @@ php artisan migrate
 
 ---
 
-### 8. Create Admin account (required)
+### 7. Create Admin account (required)
 
 ```bash
 php artisan tinker
@@ -119,7 +98,7 @@ exit
 
 ---
 
-### 9. Start the server
+### 8. Start the server
 
 ```bash
 php artisan serve
@@ -140,45 +119,6 @@ Password: admin123
 
 ---
 
-## Default Roles
 
-| Role | Permissions |
-|------|------------|
-| admin | Full CRUD access |
-| user | View only |
-
-New registrations are assigned the `user` role by default.
-
----
-
-## Notes
-
-- Admin account must be created manually.
-- Login back-button cache prevention is already configured.
-- All student operations use AJAX (no page reloads).
-- DataTables is used for listing students.
-
----
-
-## Troubleshooting
-
-### Database connection error
-
-- Check `.env` credentials
-- Ensure MySQL service is running
-
-### Icons not showing
-
-- Ensure internet connection (Bootstrap Icons CDN)
-
-### npm command blocked
-
-Run:
-
-```powershell
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
-
----
 
 

@@ -15,7 +15,7 @@
 <table class="table table-bordered" id="studentsTable">
     <thead>
         <tr>
-            <th>ID</th>
+            <th>NO</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
